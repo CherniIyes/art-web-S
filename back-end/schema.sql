@@ -21,11 +21,12 @@ USE `art` ;
 -- Table `art`.`art`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art`.`art` (
-  `idart` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(450) NOT NULL,
   `artistname` VARCHAR(450) NOT NULL,
   `image` VARCHAR(10045) NOT NULL,
-  PRIMARY KEY (`idart`))
+  `price` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
