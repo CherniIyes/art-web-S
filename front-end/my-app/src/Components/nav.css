@@ -1,0 +1,155 @@
+.stic{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.Header{
+
+   
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 120px;
+    box-shadow: 1px 2px 10px #656569;
+    transition: .9s ease-in-out;
+
+   
+    
+
+    
+    
+}
+.Header:hover{
+    background-color: #fff;
+}
+
+.nav{
+
+    
+    cursor: pointer;
+    display: flex;
+    list-style-type: none;
+}
+
+
+.lii {
+margin-top: 25px;
+margin-right: 30px;
+color:black;
+
+font-size: 20px;
+font-weight: 700;
+height: 25px;
+transition: .9s ease-in-out;
+
+
+
+
+}
+.active {
+    color: #096919;
+    
+    
+    
+}
+/* .logoo{
+
+  
+ color:rgb(3, 3, 3)
+
+} */
+
+.lii:hover{
+
+
+
+color: #0a835e;
+border-bottom: 1px solid #0a835e;
+
+
+
+
+}
+
+.logoo{
+
+font-size: 35px; 
+
+color:black;
+
+margin-bottom:7px; 
+margin-right: 80px;
+transition: .9s;
+
+transition: .9s ease-in-out;
+
+
+
+}
+
+.logoo:hover{
+
+color:black;
+   
+}
+
+
+
+@media screen and (max-width: 768px){
+    .Header{
+
+   
+        background-color: rgba(146, 177, 218, 0.7);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        box-shadow: 1px 2px 10px #656569;
+        transition: .9s ease-in-out;
+        
+    }
+
+    
+}
+@media screen and (max-width: 600px){
+
+    .Header{
+
+   
+        background-color: rgba(146, 177, 218, 0.7);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+        box-shadow: 1px 2px 10px #656569;
+        transition: .9s ease-in-out;
+    
+       
+        
+    
+        
+        
+    }
+    .lii {
+        margin-top: 10px;
+        margin-right: 10px;
+        color:black;
+        
+        font-size: 17px;
+        font-weight: 700;
+        height: 25px;
+        transition: .9s ease-in-out;
+        
+        
+        
+        
+        }
+
+
+
+}
+
+.picc{
+    width: 185px;
+}

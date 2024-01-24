@@ -1,0 +1,208 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #394240; /* Updated background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: #f3f3f3;
+}
+
+.App-link {
+  color: #00bcd4;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Home.css */
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+}
+
+.card {
+  border: 2px solid #546e7a; /* Updated border color */
+  margin: 40px; /* Increased margin for larger cards */
+  width: 350px; /* Increased width for larger cards */
+  text-align: center;
+  border-radius: 30px; /* Increased border radius for larger cards */
+  background: linear-gradient(45deg, #546e7a, #748c94); /* Updated gradient colors */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Increased box shadow for larger cards */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Updated height for larger cards */
+  object-fit: cover;
+  border-radius: 30px 30px 0 0; /* Updated border radius */
+  transition: transform 0.3s ease-in-out;
+}
+
+.text {
+  padding: 20px; /* Slightly increased padding */
+}
+
+.receipe-content-area {
+  transform: scale(1);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); /* Increased box shadow for larger cards */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 20px; /* Updated border radius */
+  background: #fff;
+  overflow: hidden;
+}
+
+p.info {
+  margin: 16px 0; /* Slightly increased margin */
+  font-size: 18px; /* Updated font size */
+  color: #737a75;
+  transition: color 0.3s ease-in-out;
+}
+
+.receipe-content-area:hover,
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 12px 12px 36px rgba(0, 0, 0, 0.6); /* Slightly increased box shadow on hover */
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.c {
+  display: flex;
+  gap: 36px; /* Increased gap */
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  align-content: space-around;
+  align-items: center;
+}
+
+.B {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  
+}
+
+.i {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+/* ... (previous styles) */
+/* ... (previous styles) */
+
+.bb {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Satisfy', cursive;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 15px 12px;
+  background: linear-gradient(90deg, #f4f4f4, #95f39e);
+  border: 2px solid #f6f5f9;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  z-index: 1;
+  margin-left:50px;
+}
+.test {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Satisfy', cursive;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 15px 12px;
+  background: linear-gradient(90deg, #f4f4f4, #e74848);
+  border: 2px solid #f6f5f9;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  z-index: 1;
+  margin-left:5px;
+}
+
+
+
+
+.bb:hover {
+  background: linear-gradient(90deg, #39e367, #44d03f); /* Updated gradient colors for the update button on hover */
+  border: 2px solid #71f285; /* Matching border color for the update button on hover */
+}
+.test:hover {
+  background: linear-gradient(90deg, #ed3f3f, #f93838); /* Updated gradient colors for the update button on hover */
+  border: 2px solid #ed5656; /* Matching border color for the update button on hover */
+}
+
+
+
+/* ... (previous styles) */
+
+
+img.img {
+  height: 200px; /* Updated height for larger cards */
+  width: 250px; /* Adjusted width for larger cards */
+  margin: 30px;
+
+}
+
+.text .food {
+  color: #000;
+  text-align: center;
+  margin: 16px 0; /* Slightly increased margin */
+  font-size: 18px; /* Updated font size */
+  transition: color 0.3s ease-in-out;
+}
+
+.cc{
+  padding-top: 110px;
+  background: linear-gradient(to right, #ffffff, #f2f2f2); /* Deep purple gradient background */
+}
+.container{
+  width: 500px;
+}
+.name{
+  display:flex;
+  justify-content: space-between;
+  justify-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
