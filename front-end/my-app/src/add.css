@@ -1,0 +1,104 @@
+/* AddProduct.css */
+
+/* Global styles */
+:root {
+    --primary-color: #7df6a3;; /* Deep purple color */
+    --secondary-color: #7df6a3; /* Darker purple color */
+    --background-color: #ecf0f1;
+    --text-color: #333;
+  }
+  
+  /* Container styles */
+  .containerr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffffff, #b7f2c4); /* Deep purple gradient background */
+    overflow: hidden;
+  }
+  
+  /* Form styles */
+  .form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increased shadow intensity */
+    padding: 40px;
+    width: 400px;
+    max-width: 90%;
+    box-sizing: border-box;
+    animation: fadeInUp 1s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Input styles */
+  input {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    font-size: 16px;
+    transition: border-color 0.5s ease;
+  }
+  
+  input:focus {
+    border-color: var(--primary-color);
+  }
+  
+  /* Button styles */
+  button {
+    background: linear-gradient(to right, #97f9b9, #f2f1f5);
+    color: #050505;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 1s ease, transform 1s ease, box-shadow 1s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    background: var(--secondary-color);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: width 1s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #23df02, #04ef27);
+    transform: scale(1.05);
+  }
+  
+  button:hover:before {
+    width: 100%;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 600px) {
+    .form {
+      width: 100%;
+    }
+  }
+  
