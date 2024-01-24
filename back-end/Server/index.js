@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require("cors");
 const PORT = 6900
-const db = require("../database/index")
+const db = require("../mysql/index")
 const routes = require("../Routes")
 
 
