@@ -9,7 +9,6 @@ const artistRoutes =require("../Routes/artistRoutes.js")
 
 
 
-
 app.use(cors())
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(express.json())
