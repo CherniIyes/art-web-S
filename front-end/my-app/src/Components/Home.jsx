@@ -53,7 +53,7 @@ function Home() {
       <Slider/>
       <div className='cc'>
 
-      <h1>Our Products</h1>
+      <h1>Our Peintings</h1>
       <br />
       <br />
       <div className="c">
@@ -82,7 +82,7 @@ function Home() {
                       onClick={() =>
                         handleUpdate(e.id, {
                           name: prompt('Enter new Name:', e.name),
-                          description: prompt('Enter new Description:', e.description),
+                          artistname: prompt('Enter new artistname:', e.artistname),
                           price: prompt('Enter new Price:', e.price),
                           image: prompt('Enter new Image URL:', e.image),
                         })
