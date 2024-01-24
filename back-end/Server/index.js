@@ -4,7 +4,7 @@ const cors = require("cors");
 const PORT = 6900
 const db = require("../mysql/index")
 const artRoutes = require("../Routes/artRoutes.js")
-const artistRoutes =require("../Routes/artistRoutes.js")
+const artistRoutes = require("../Routes/artistRoutes.js")
 
 
 
