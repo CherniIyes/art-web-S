@@ -2,7 +2,7 @@ const model = require("../models/art");
 
 module.exports = {
   getall: (req, res) => {
-    model.getAll((err, results) => {
+    model.getall((err, results) => {
       if (err) {
         res.status(500).send(err);
       } else {

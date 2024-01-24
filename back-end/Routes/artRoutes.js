@@ -8,3 +8,5 @@ routes.get("/art/getone",controller.getone)
 routes.get("/art/add",controller.add)
 routes.get("/art/update",controller.update)
 routes.get("/art/DELETE",controller.DELETE)
+
+module.exports = routes;

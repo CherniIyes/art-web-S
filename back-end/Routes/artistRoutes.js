@@ -8,3 +8,5 @@ routes.get("/getone",controller.getone)
 routes.get("/add",controller.add)
 routes.get("/update",controller.update)
 routes.get("/DELETE",controller.DELETE)
+
+module.exports = routes;
