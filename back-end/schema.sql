@@ -20,13 +20,13 @@ USE art ;
 -- -----------------------------------------------------
 -- Table art.art
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS art.art (
-  id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(450) NOT NULL,
-  artistname VARCHAR(450) NOT NULL,
-  image VARCHAR(10045) NOT NULL,
-  price VARCHAR(45) NOT NULL,
-  PRIMARY KEY (id))
+CREATE TABLE IF NOT EXISTS `art`.`art` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `artistname` VARCHAR(450) NOT NULL,
+  `image` VARCHAR(10045) NOT NULL,
+  `price` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -48,7 +48,6 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ﻿
 Badis
 badis555
