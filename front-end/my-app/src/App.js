@@ -22,7 +22,7 @@ function App() {
         <div>
           <div className='nav'>
             <p onClick={() => switchView('home')} className='lii'>Home</p>
-            <p  onClick={() => switchView('posts')} className='lii'>Cards</p>
+            <p  onClick={() => switchView('Cards')} className='lii'>Cards</p>
           </div>
         </div>
       </div>
