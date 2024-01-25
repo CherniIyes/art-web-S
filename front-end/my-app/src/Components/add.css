@@ -2,8 +2,10 @@
 
 /* Global styles */
 :root {
-  --primary-color: #7df6a3; /* Deep purple color */
-  --secondary-color: #7df6a3; /* Darker purple color */
+  --primary-color: #7df6a3;
+  /* Deep purple color */
+  --secondary-color: #7df6a3;
+  /* Darker purple color */
   --background-color: #ecf0f1;
   --text-color: #333;
 }
@@ -14,20 +16,29 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(to right, #ffffff, #b7bcf2); /* Deep purple gradient background */
+  background: linear-gradient(to right, #ffffff, #b7bcf2);
+  /* Deep purple gradient background */
   overflow: hidden;
 }
 
 /* Form styles */
 .form {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increased shadow intensity */
-  padding: 40px;
-  width: 400px;
-  max-width: 90%;
-  box-sizing: border-box;
+  border-radius: 0px;
+  padding: 23px;
+  width: 403px;
+  height: 405px;
+  max-width: 126%;
+  position: relative;
+  bottom: 75px;
   animation: fadeInUp 1s ease;
+  
+}
+
+.form:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
 }
 
 @keyframes fadeInUp {
@@ -35,6 +46,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
