@@ -72,7 +72,7 @@ function AddCard() {
           className={classNames('input')}
         />
 
-        <button onClick={handleAdd} className={classNames('button')}>
+        <button onClick={handleAdd} className="update-button">
           Submit
         </button>
       </form>

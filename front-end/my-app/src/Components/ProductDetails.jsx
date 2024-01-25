@@ -5,7 +5,7 @@ import ReactImageZoom from "react-image-zoom";
 import ReactStars from "react-stars";
 import axios from "axios";
 import "./moredt.css";
-
+import "./productDetails.css"
 const ProductDetails = ({ One, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
 
@@ -39,63 +39,19 @@ const ProductDetails = ({ One, addToCart }) => {
 
   return (
     <>
-      <Container class1="main-product-wrapper py-5 home-wrapper-2 ">
-        <div className="row">
-          <div className="col-6">
-            <div className="main-product-image">
-              <div>
-                <ReactImageZoom {...prop} />
-              </div>
-            </div>
-            <div className="other-product-images d-flex flex-wrap gap-15"></div>
-          </div>
-          <div className="col-6">
-            <div className="main-product-details">
-              <div className="border-bottom">
-                <h5 className="title">{One[0].name}</h5>
-              </div>
-              <div className="border-bottom py-3">
-                <div className="d-flex align-items-center gap-10">
-                  <ReactStars count={5} size={24} value={4} edit={false} activeColor="#ffd700" />
-                  <p className="mb-0 t-review">(4 Reviews)</p>
-                </div>
-              </div>
-              <br />
-              <div className="border-bottom">
-                <h3 className="title">Description</h3>
-              </div>
+<div className="containerDetails">
+<div className="ci">
+<img className="imgDetails" src={One[0].image} alt="" />
+</div>
+<div className="cd">
 
-              <div className=" py-3">
-                <div className="d-flex gap-10 align-items-center my-2">
-                  <h5 className="product-data">{One[0].artistname}</h5>
-                </div>
-                <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3">
-                  <h3 className="product-heading">Quantity :</h3>
-                  <div className="">
-                    <input
-                      type="number"
-                      name="quantity"
-                      min={1}
-                      max={10}
-                      className="form-control"
-                      style={{ width: "70px" }}
-                      value={quantity}
-                      onChange={handleQuantityChange}
-                    />
-                  </div>
-                  <div className="d-flex align-items-center gap-30 ms-5">
-                    <button className="button border-0" type="button" onClick={handleOrderNow}>
-                      Order now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
+<h3>  <span className="paint">Painting:</span>     {One[0].name} </h3>
+<h3> <span className="paint"> Artist:</span> {One[0].artistname}</h3>
+<h4> <span className="paint"> Price: </span>${One[0].price}</h4>
+<button className='update-button' onClick={handleOrderNow}>Order Now</button>
+</div>
+</div>
 
-      {/* ... (your existing JSX code) */}
     </>
   );
 };

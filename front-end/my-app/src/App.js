@@ -16,7 +16,10 @@ function App() {
 
   const addToCart = (item) => {
     setCartItems((prevItems) => [...prevItems, item]);
+    switchView('Cart')
   };
+
+
 
   const removeFromCart = (itemId) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));

@@ -1,0 +1,32 @@
+.containerDetails{
+    padding:50px;
+    display : flex;
+    justify-items: start;
+
+}
+.imgDetails{
+    height:500px;
+    width: 400px;
+    border-radius: 30px ;
+}
+.ci{
+width: 700px;
+padding-left: 200px; ;
+
+}
+.cd{
+    display :flex ;
+ flex-direction: column;
+ justify-content: space-evenly;
+ width:500px;
+ border-radius: 30px ;
+ box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); /* Increased box shadow for larger cards */
+ background-color: #eef4fa;
+justify-items: flex-start;
+}
+
+.paint{
+size: 16px;
+color: rgb(116, 104, 104);
+}
+

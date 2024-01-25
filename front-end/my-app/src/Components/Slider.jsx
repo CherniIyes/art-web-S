@@ -8,7 +8,7 @@ const Slider = () => {
     }
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item className="slider-background" interval={2000}>
+            {/* <Carousel.Item className="slider-background" interval={2000}>
                 <div className="d-flex flex-row justify-content-center align-items-center">
                     <img
                         style={{ height: "600px", width: "99%" }}
@@ -18,7 +18,7 @@ const Slider = () => {
                     />
                    
                 </div>
-            </Carousel.Item>
+            </Carousel.Item> */}
             <Carousel.Item className="slider-background2" interval={2000}>
                 <div className="d-flex flex-row justify-content-center align-items-center">
                     <img
