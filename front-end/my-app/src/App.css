@@ -226,7 +226,9 @@ img.img {
   width: 97%;
   background-size: cover;
 }
-
+.imgg:hover {
+cursor: pointer;
+}
 .bord:hover{
 
   box-shadow: 5px 1px 10px #a0a0a3;
@@ -510,6 +512,8 @@ margin-top: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: box-shadow 0.3s ease;
+  position: relative;
+  top: 49px;
 }
 
 .cart-container:hover {
