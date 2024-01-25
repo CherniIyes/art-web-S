@@ -99,12 +99,14 @@ p.info {
 
 .c {
   display: flex;
-  gap: 36px; /* Increased gap */
+  gap: 36px;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
   align-content: space-around;
   align-items: center;
+  position: relative;
+  bottom: 21px;
 }
 
 .B {
@@ -218,19 +220,10 @@ img.img {
   flex-direction: column;
 }
 
-.imgg{
-margin: 5px;
-height: 60%;
+.imgg {
+  margin: 5px;
+  height: 60%;
   width: 97%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
-
-
-
-  
   background-size: cover;
 }
 
@@ -261,7 +254,8 @@ margin-left: 10px;
 margin-right: 5px;
 
 
-}.par2{
+}
+.par2{
  
   
   font-family: "Droid Sans";
@@ -436,9 +430,8 @@ margin-top: 5px;
   margin-top: 10px;
 }
 
-.delete-button,
-.update-button {
-  background-color: #d9534f; /* Bootstrap's danger color, you can customize this */
+.delete-button, .update-button {
+  background-color: #d9534f;
   color: #fff;
   border: none;
   padding: 8px 12px;
@@ -447,6 +440,9 @@ margin-top: 5px;
   border-radius: 5px;
   font-size: 14px;
   transition: background-color 0.3s ease;
+  position: relative;
+  top: -7px;
+  right: 3px;
 }
 
 .update-button {
