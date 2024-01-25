@@ -1,14 +1,27 @@
-// Home.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
-
-// import NavBar from './NavBar.jsx';
+import { FaStar } from 'react-icons/fa';
 import Slider from "./Slider.jsx"
 import Stars from './Stars.jsx';
+import ProductDetails from './ProductDetails.jsx';
 
-function Home() {
+function Home(props) {
   const [data, setData] = useState([]);
+  const [updatedData, setUpdatedData] = useState({});
+  const [showPopup, setShowPopup] = useState(false);
+
+  const [popupData, setPopupData] = useState({
+    id: null,
+    name: '',
+    price: '',
+    artistname: '',
+    image: '',
+  });
+
+  const S = (id) => {
+    props.fun(id, "Details");
+  };
 
   useEffect(() => {
     fetchData();
@@ -36,71 +49,97 @@ function Home() {
       });
   };
 
-  const handleUpdate = (id, updatedData) => {
-    console.log(updatedData);
+  const handleUpdate = () => {
+    console.log('Updating...');
     axios
-      .put(`http://localhost:8080/art/update/${id}`, updatedData)
+      .put(`http://localhost:8080/art/update/${popupData.id}`, updatedData)
       .then(() => {
+        console.log('Update successful!');
         fetchData();
+        setUpdatedData({});
+        setShowPopup(false);
       })
       .catch((err) => {
         console.error('Error updating item:', err);
       });
   };
 
-  return (
-    <div >
-      <Slider/>
-      <div className='cc'>
+  const handlePopupOpen = (id, name, price, artistname, image) => {
+    setPopupData({
+      id,
+      name,
+      price,
+      artistname,
+      image,
+    });
+    setShowPopup(true);
+    setUpdatedData({
+      name,
+      price,
+      artistname,
+      image,
+    });
+  };
 
-      <h1>Our Peintings</h1>
-      <br />
-      <br />
-      <div className="c">
-        {data.map((e, i) => (
-          <div key={i}>
-            <div className="receipe-content-area">
-              
-              <div className="container">
-                <div className="header">
-                  <img className="img" src={e.image} alt="" />
-                </div>
-                <div className="text">
-                <h3>{e.name}</h3>
-                  <h1 className="food"></h1>
-                  
-                  <div className='name'>
-                    <p className="info">${e.price}</p> 
-                <Stars/>
-                </div>
-                    <div> 
-                  <div>
-                    <button onClick={() => handleDelete(e.id)} className='test'>
-                      delete
-                    </button>
-                    <button
-                      onClick={() =>
-                        handleUpdate(e.id, {
-                          name: prompt('Enter new Name:', e.name),
-                          artistname: prompt('Enter new artistname:', e.artistname),
-                          price: prompt('Enter new Price:', e.price),
-                          image: prompt('Enter new Image URL:', e.image),
-                        })
-                      }
-                      className='bb'
-                      >
-                       update
-                    </button>
-                        </div>
-                  </div>
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUpdatedData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  return (
+    <div>
+      <Slider />
+      <div className={`cc`}>
+        <h1>Our Paintings</h1>
+        <br />
+        <br />
+        <div className="c">
+          {data.map((e, i) => (
+            <div className='bord' key={i}>
+              <img src={e.image} className='imgg' alt={e.name} onClick={() => S(e.id)} />
+
+              <p className='par2'> {e.name} </p>
+              <p className='par'> {e.artistname} </p>
+
+              <Stars /> {/* Assuming Stars component is used for displaying stars. Adjust accordingly. */}
+
+              <div className='flexx'>
+                <p className='many'>${e.price}</p>
+                <div className='button-container'>
+                  <button className='delete-button' onClick={() => handleDelete(e.id)}>
+                    Delete
+                  </button>
+                  <button className='update-button' onClick={() => handlePopupOpen(e.id, e.name, e.price, e.artistname, e.image)}>
+                    Update
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
+          ))}
         </div>
+      </div>
+
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <h2>Update Painting</h2>
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" value={updatedData.name} onChange={handleInputChange} />
+            <label htmlFor="price">Price:</label>
+            <input type="text" id="price" name="price" value={updatedData.price} onChange={handleInputChange} />
+            <label htmlFor="artistname">Artist Name:</label>
+            <input type="text" id="artistname" name="artistname" value={updatedData.artistname} onChange={handleInputChange} />
+            <label htmlFor="image">Image URL:</label>
+            <input type="text" id="image" name="image" value={updatedData.image} onChange={handleInputChange} />
+            <button onClick={handleUpdate}>Update</button>
+            <button onClick={() => setShowPopup(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

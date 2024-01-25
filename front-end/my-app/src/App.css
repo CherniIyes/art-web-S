@@ -206,3 +206,408 @@ img.img {
   margin-top: 20px;
 
 }
+.bord{
+
+  width: 300px;
+  height: 400px;
+  border: 1px solid rgb(255, 252, 252);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #eef4fa;
+  
+  transition: .5s ease-in-out;
+}
+
+.imgg{
+margin: 5px;
+height: 60%;
+  width: 97%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+
+
+
+  
+  background-size: cover;
+}
+
+.bord:hover{
+
+  box-shadow: 5px 1px 10px #a0a0a3;
+  opacity: 0.9;
+  
+}
+.flexx{
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  justify-items: center;
+}
+
+.par{
+
+
+margin-top: -5px;
+margin-bottom: 0;
+font-family: "Droid Sans";
+font-weight: 900;
+
+font-size: 18px;
+margin-left: 10px;
+margin-right: 5px;
+
+
+}.par2{
+ 
+  
+  font-family: "Droid Sans";
+  color: rgb(126, 128, 130);
+  
+  font-size: 15px;
+  margin-left:20px
+  
+  
+  
+  }
+
+.b{
+text-decoration: none;
+color: black;
+font-family: 'Satisfy';
+font-size: 20px;
+font-weight: 900;
+
+border-radius: 30px;
+margin-top: 19px;
+
+margin-right: 10px;
+transition: .9s ease-in-out;
+position: relative;
+
+
+
+}
+.b::after{
+  content: '';
+  width: 70%;
+  height: 3px;
+  background-color: #096919;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  border-radius: 30px;
+  opacity: 0;
+transition: .9s ease-in-out;
+
+}
+
+
+.b:hover{
+color: #096919;
+
+}
+.b:hover::after{
+  opacity: 1;
+  
+  }
+.many{
+font-family: 'Satisfy';
+margin-left: 10px;
+  font-size: 19px;
+color: #fff;
+ background-color: #096919;
+border-radius: 50% 27% 73% 35%;
+padding: 3px;
+box-shadow: 5px 1px 10px #a0a0a3;
+
+}
+.star{
+  display: flex;
+  color: rgb(232, 245, 91);
+gap: 2px;
+margin-left: 10px;
+margin-top: 5px;
+
+}
+
+
+
+
+
+/* You can adjust these styles based on your design preferences */
+
+
+
+
+
+
+/* Remove one of the duplicated sections */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #ffffff;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.popup.active {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup h2 {
+  color: #4f5559;
+}
+
+.popup label {
+  display: block;
+  margin: 15px 0;
+  color: #424547;
+}
+
+.popup input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.popup button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.popup button:hover {
+  background-color: #297fb8;
+}
+
+
+
+.som{
+  color: black;
+}
+
+
+
+
+
+
+
+/* Add these styles to your existing CSS file or create a new one */
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.delete-button,
+.update-button {
+  background-color: #d9534f; /* Bootstrap's danger color, you can customize this */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.update-button {
+  background-color: #5bc0de; /* Bootstrap's info color, you can customize this */
+}
+
+.delete-button:hover,
+.update-button:hover {
+  background-color: #c9302c; /* Darker shade for delete button */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cart.css */
+
+.cart-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.cart-container:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover .cart-item-image {
+  transform: scale(1.1);
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.item-price {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.remove-btn {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff0000;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.pay-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-btn:hover {
+  background-color: #45a049;
+}
