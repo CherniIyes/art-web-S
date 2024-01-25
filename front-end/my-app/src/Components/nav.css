@@ -150,6 +150,11 @@ color:black;
 
 }
 
-.picc{
-    width: 185px;
+.logo11 {
+    width: 140px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo11:hover {
+    transform: rotate(360deg) scale(1.2);
 }
