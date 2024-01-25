@@ -60,7 +60,7 @@ function App() {
                 Cards
               </p>
               <p onClick={() => switchView('Cart')} className="lii">
-                Cart
+              🛒
               </p>
             </div>
           </div>

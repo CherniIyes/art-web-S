@@ -11,13 +11,13 @@ const Cart = ({ cartItems, removeFromCart, pay, clearCart }) => {
           <li key={item.id} className="cart-item">
             <img src={item.image} alt={item.name} className="cart-item-image" />
             <div className="cart-item-details">
-              <h3>{item.name}</h3>
+              <p className='item-name'>{item.name}</p>
               <hr />
-              <p>${item.price}</p>
+              <p className="item-price">${item.price}</p>
+              <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
+                Remove
+              </button>
             </div>
-            <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
-              Remove
-            </button>
           </li>
         ))}
       </ul>
@@ -26,7 +26,7 @@ const Cart = ({ cartItems, removeFromCart, pay, clearCart }) => {
           <strong>Total:</strong> ${totalPrice.toFixed(2)}
         </p>
         <button className="pay-btn" onClick={clearCart}>
-          Pay
+          Pay Now
         </button>
       </div>
     </div>
