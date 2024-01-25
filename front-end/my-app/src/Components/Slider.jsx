@@ -31,17 +31,17 @@ const Slider = () => {
                 </div>
             </Carousel.Item>
 
-            {/* <Carousel.Item className="slider-background3" interval={2000}>
+            <Carousel.Item className="slider-background3" interval={2000}>
                 <div className="d-flex flex-row justify-content-center align-items-center">
                     <img
-                        style={{ height: "480px", width: "99%" }}
+                        style={{ height: "600px", width: "99%" }}
                         className=""
-                        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftrekthehimalayas.com%2Fsar-pass-trek&psig=AOvVaw1DTbfi4QQ-TSrDm8EkUm97&ust=1706049133714000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKj3lcCG8oMDFQAAAAAdAAAAABAD"
+                        src="https://images7.alphacoders.com/132/1323379.png"
                         alt="First slide"
                     />
                     
                 </div>
-            </Carousel.Item> */}
+            </Carousel.Item>
 
             {/* <Carousel.Item className="slider-background4" interval={2000}>
                 <div className="d-flex flex-row justify-content-center align-items-center">

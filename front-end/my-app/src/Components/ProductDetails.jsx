@@ -1,24 +1,42 @@
-import {React, useState} from "react";
+import React, { useState } from "react";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import Container from "./Container";
 import ReactImageZoom from "react-image-zoom";
 import ReactStars from "react-stars";
 import axios from "axios";
-import "./moredt.css"
+import "./moredt.css";
 
-const ProductDetails = ({One}) => {
-    
+const ProductDetails = ({ One,addToCart,}) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const prop = {
+    width: 594,
+    height: 600,
+    zoomWidth: 600,
+    img: `${One[0].image}`,
+  };
 
 
-    const prop = {
-        width: 594,
-        height: 600,
-        zoomWidth: 600,
-        img : `${One[0].image}`
+  const handleOrderNow = () => {
+    const orderDetails = {
+      id: One[0].id,
+      name: One[0].name,
+      price: One[0].price,
+      quantity: quantity,
     };
+
+    // Call the addToCart function with orderDetails
+    addToCart(orderDetails);
+
+    // Reset quantity to 1 after adding to cart
+    setQuantity(1);
+  };
+
+
+
   return (
     <>
-    <Container class1="main-product-wrapper py-5 home-wrapper-2 ">
+      <Container class1="main-product-wrapper py-5 home-wrapper-2 ">
       <div className="row">
         <div className="col-6">
           <div className="main-product-image">
@@ -61,7 +79,7 @@ const ProductDetails = ({One}) => {
             <div className=" py-3">
               <div className="d-flex gap-10 align-items-center my-2">
             
-                <h5 className="product-data">{One[0].description}</h5>
+                <h5 className="product-data">{One[0].artistname}</h5>
               </div>
              
               
@@ -86,6 +104,7 @@ const ProductDetails = ({One}) => {
                     className="button border-0"
                    
                     type="button"
+                    onClick={() => addToCart(One)}
                   >
                     Order now
                   </button>
