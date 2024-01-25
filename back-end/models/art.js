@@ -25,5 +25,13 @@ module.exports = {
             connection.query(sql, [id], (err, results) => {
                   callback(err, results)
             })
+      },
+
+      getOne: (id, callback) => {
+            const sql = "SELECT *  FROM art WHERE id=?"
+connection.query(sql, [id], (err, results) => {
+                  callback(err, results)
+            })
       }
+
 }

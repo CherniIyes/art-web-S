@@ -1,5 +1,6 @@
 
-    import React from 'react';import test from "../pics/logoo.png";
+    import React from 'react';
+    import logo from "../pics/art.png";
     
 // import { BiAtom } from 'react-icons/bi';
 import "./nav.css";
@@ -12,7 +13,7 @@ function NavBar() {
         <div className='logoo'>
           {/* <BiAtom /> */}
           {/* Use the imported image */}
-          <img className='picc' src={test} alt="Logo" />
+          <img className='picc' src={logo} alt="Logo" />
         </div>
         <div>
           <ul className='nav'>
