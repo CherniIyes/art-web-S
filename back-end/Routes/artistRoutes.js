@@ -1,6 +1,6 @@
-const  express=require('express')
+const express = require('express')
 const controller = require("../Controllers/artistController.js")
-const routes =  express.Router()
+const routes = express.Router()
 
 
 routes.get("/getall",controller.getall)

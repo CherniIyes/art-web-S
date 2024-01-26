@@ -14,11 +14,11 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema art
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `art` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
-USE `art` ;
+CREATE SCHEMA IF NOT EXISTS art DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE art ;
 
 -- -----------------------------------------------------
--- Table `art`.`art`
+-- Table art.art
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art`.`art` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -33,14 +33,14 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `art`.`artist`
+-- Table art.artist
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `art`.`artist` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(450) NOT NULL,
-  `image` VARCHAR(10000) NOT NULL,
-  `city` VARCHAR(450) NOT NULL,
-  PRIMARY KEY (`id`))
+CREATE TABLE IF NOT EXISTS art.artist (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(450) NOT NULL,
+  image VARCHAR(10000) NOT NULL,
+  city VARCHAR(450) NOT NULL,
+  PRIMARY KEY (id))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -48,4 +48,6 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+﻿
+Badis
+badis555
